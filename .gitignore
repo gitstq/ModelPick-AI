@@ -36,7 +36,7 @@ htmlcov/
 # 导出文件 / Exported files
 *.json
 !data/models.json
-*.md
+!README.md
 *.csv
 
 # 系统文件 / System files
