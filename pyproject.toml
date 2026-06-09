@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "modelpick-ai"
+version = "1.0.0"
+description = "轻量级终端AI模型智能推荐引擎 / Lightweight Terminal AI Model Recommendation Engine"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "ModelPick-AI Team"}
+]
+keywords = ["llm", "ai", "model-recommendation", "cli", "hardware-detection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "click>=8.0.0",
+]
+
+[project.scripts]
+modelpick = "modelpick_ai.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["modelpick_ai*"]
+
+[tool.setuptools.package-data]
+modelpick_ai = ["../data/models.json"]
